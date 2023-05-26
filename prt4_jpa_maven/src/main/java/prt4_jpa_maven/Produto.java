@@ -19,6 +19,10 @@ public class Produto {
 	
 	//
 	
+	public Produto() {
+		
+	}
+	
 	public Produto(Integer id, String descricao, String setor) {
 		this.id = id;
 		this.descricao = descricao;
@@ -51,7 +55,7 @@ public class Produto {
 	@Override
 	public String toString() {
 		return "Produto [id: " + id + 
-				", Descrição: " + descricao + 
+				", Descricao: " + descricao + 
 				", Setor: " + setor + "]";
 	}
 }

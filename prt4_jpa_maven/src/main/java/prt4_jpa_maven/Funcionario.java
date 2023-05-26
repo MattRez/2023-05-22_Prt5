@@ -1,10 +1,12 @@
 package prt4_jpa_maven;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 public class Funcionario {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -16,6 +18,10 @@ public class Funcionario {
 	String funcao;
 	
 	//
+	
+	public Funcionario() {
+		
+	}
 	
 	public Funcionario(Integer id, String nome, String funcao) {
 		this.id = id;
@@ -46,20 +52,10 @@ public class Funcionario {
 	
 	//
 	
-	/*
-	 * @Override
-	public String toString() {
-		return "Cliente [Cpf: " + cpf + 
-				", Nome: " + nome + 
-				", Endereço: " + endereco + 
-				", Genero" + genero + 
-				", Dt_Nasc: " + dt_nasc + "]";
-	}
-	 */
-	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+		return "Funcionario [Id: " + id + 
+				", Nome: " + nome + 
+				", Funcao: " + funcao + "]";
 	}
 }
